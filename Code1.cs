@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class GoPlaces : MonoBehaviour
+public class WaypointMover : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed;
     [SerializeField] private Transform _placesContainer;

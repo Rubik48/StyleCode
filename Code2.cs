@@ -2,10 +2,10 @@ using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class InstantiateBulletsShooting : MonoBehaviour
+public class BulletShooter : MonoBehaviour
 {
     [SerializeField] private float _bulletSpeed;
-    [SerializeField] private GameObject _bulletPrefab;
+    [SerializeField] private Bullet _bulletPrefab;
     [SerializeField] private Transform _target;
     [SerializeField] private float _shootingInterval;
 
