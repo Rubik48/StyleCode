@@ -19,7 +19,7 @@ public class BulletShooter : MonoBehaviour
         while (enabled)
         {
             Vector3 shootDirection = (_target.position - transform.position).normalized;
-            GameObject bullet = SpawnBullet(shootDirection);
+            Bullet bullet = SpawnBullet(shootDirection);
             
             ConfigureBullet(bullet, shootDirection);
             
@@ -27,14 +27,14 @@ public class BulletShooter : MonoBehaviour
         }
     }
 
-    private GameObject SpawnBullet(Vector3 direction)
+    private Bullet SpawnBullet(Vector3 direction)
     {
         Vector3 spawnPosition = transform.position + direction;
         
         return Instantiate(_bulletPrefab, spawnPosition, Quaternion.identity);
     }
 
-    private void ConfigureBullet(GameObject bullet, Vector3 direction)
+    private void ConfigureBullet(Bullet bullet, Vector3 direction)
     {
         Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
         
